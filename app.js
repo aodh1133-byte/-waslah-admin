@@ -1,5 +1,8 @@
 const $ = (s)=>document.querySelector(s);
 const $$ = (s)=>[...document.querySelectorAll(s)];
+const SUPABASE_URL = 'https://hcdfynchmoghttjoqxfm.supabase.co';
+const SUPABASE_KEY = ' sb_publishable_gyHjVV8JF9nsw89KNEpukw_my5BwCFq';
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 const store = {
   get(k, fallback){try{return JSON.parse(localStorage.getItem(k)) ?? fallback}catch{return fallback}},
   set(k,v){localStorage.setItem(k,JSON.stringify(v))}

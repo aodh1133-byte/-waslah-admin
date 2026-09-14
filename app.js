@@ -45,3 +45,5 @@ $('#exportJson').onclick=()=>download('waslah-backup.json',JSON.stringify({staff
 $('#clearData').onclick=()=>{if(confirm('سيتم حذف جميع البيانات المحلية. هل أنت متأكد؟')){['waslah_staff','waslah_parents','waslah_requests','waslah_notes'].forEach(k=>localStorage.removeItem(k));staff=[];parents=[];requests=[];$('#dailyNotes').value='';renderAll();toast('تم مسح البيانات')}};
 function download(name,content,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
 renderAll();
+
+document.querySelector('#entryForm button[value="cancel"]').onclick=(e)=>{e.preventDefault();document.querySelector('#entryDialog').close();};

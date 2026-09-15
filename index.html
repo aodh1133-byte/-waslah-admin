@@ -41,6 +41,7 @@
         <button data-page="parents">أولياء الأمور</button>
         <button data-page="requests">الطلبات والمراسلات</button>
         <button data-page="platforms">المنصات</button>
+        <button data-page="volunteer">سجل التطوع</button>
         <button data-page="reports">التقارير</button>
         <button data-page="settings">الإعدادات</button>
       </nav>
@@ -117,7 +118,37 @@
           <a class="card platform" href="https://nvg.gov.sa/" target="_blank" rel="noopener"><strong>العمل التطوعي</strong><span>فتح المنصة</span></a>
         </div>
       </section>
+<section id="volunteer" class="page">
+  <div class="card">
+    <div class="section-head">
+      <div>
+        <h3>سجل التطوع</h3>
+        <p class="muted">إدارة وتوثيق الساعات والفرص التطوعية للطالبات</p>
+      </div>
+    </div>
 
+    <div class="actions">
+      <button id="addVolunteerBtn" class="primary">إضافة سجل تطوع</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>اسم الطالبة</th>
+            <th>الصف</th>
+            <th>الفرصة التطوعية</th>
+            <th>عدد الساعات</th>
+            <th>التاريخ</th>
+            <th>الشهادة</th>
+            <th>إجراء</th>
+          </tr>
+        </thead>
+        <tbody id="volunteerBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
       <section id="reports" class="page">
         <div class="card">
           <h3>التقارير</h3>
